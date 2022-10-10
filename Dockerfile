@@ -10,6 +10,8 @@ ENV ELIXIR_VERSION=v${ELIXIR_VERSION} \
 
 WORKDIR /tmp/elixir-build
 
+RUN apk add --update qemu-x86_64
+
 RUN \
     apk add --no-cache --update-cache \
       git \
